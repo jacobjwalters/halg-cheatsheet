@@ -11,18 +11,9 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-          
-      - name: Debugging
-        run: ls
-          
-      #- name: Upload PDF file
-        #uses: actions/upload-artifact@v3
-        #with:
-          #name: PDF
-          #path: main.pdf
+          post_compile: "latexmk -c"
           
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: main.pdf
