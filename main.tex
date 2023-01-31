@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[margin=0.45in, portrait]{geometry} % may exceed print margins
+\pagestyle{empty}
+
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage[dvipsnames]{xcolor}
+
+% Disable warnings
+% chktex-file 1
+
+% Colour-blind friendly scheme
+\definecolor{MyMagenta}{rgb}{0.91,0.16,0.54}
+\definecolor{MyGreen}{rgb}{0.4,0.65,0.12}
+\definecolor{MyPurple}{rgb}{0.46,0.44,0.7}
+\definecolor{MyOrange}{rgb}{0.85,0.37,0.01}
+\definecolor{MyEmerald}{rgb}{0.11,0.62,0.47}
+
+\colorlet{defc}{MyMagenta}
+\colorlet{lemc}{MyGreen}
+\colorlet{corc}{MyPurple}
+\colorlet{propc}{MyOrange}
+\colorlet{thmc}{MyEmerald}
+
+\colorlet{namec}{DarkOrchid}
+
+\newcommand{\wde}[1]{\textcolor{defc}{\textbf{DEF}} (\textcolor{namec}{\textit{#1}})}
+\newcommand{\wl}[1]{\textcolor{lemc}{\textbf{LEM}} (\textcolor{namec}{\textit{#1}})}
+\newcommand{\wc}[1]{\textcolor{corc}{\textbf{COR}} (\textcolor{namec}{\textit{#1}})}
+\newcommand{\wpr}[1]{\textcolor{propc}{\textbf{PROP}} (\textcolor{namec}{\textit{#1}})}
+\newcommand{\wt}[1]{\textcolor{thmc}{\textbf{THM}} (\textcolor{namec}{\textit{#1}})}
+\newcommand{\wpf}[1]{\textcolor{red}{\textit{#1}}}  % Proof
+\newcommand{\wa}[1]{\textcolor{blue}{\textit{#1}}}  % Algorithm
+\newcommand{\we}[1]{(\textbf{#1})}  % Example
+
+
+\newcommand{\Maps}[0]{\text{Maps}}
+\newcommand{\Hom}[0]{\text{Hom}}
+\newcommand{\iso}[0]{\stackrel{\sim}{\to}}
+
+
+%\fontsize{2}
+
+\begin{document}
+\begin{multicols}{2}
+  %TODO color code things
+
+  \noindent % 1.2 Fields and Vector Spaces
+  \wde{1.2.1i Field} A field $F$ is a set with $+ : F \times F \to F; (x, y) \mapsto x + y$ and $\cdot : F \times F \to F; (x, y) \mapsto xy$ s.t. $(F,+)$, $(F,\cdot)$ are abelian groups with $\lambda(x + y) = \lambda x + \lambda y$  for any $\lambda, x, y \in F$. The neutral elements are called $0_{F}$, $1_{F}$.
+  \wde{1.2.1ii Vector Space} A vector space $V$ over a field $F$ is a pair of abelian group $V=(V, +)$ and a map $F \times V \to V; (\lambda, \vec{v}) \mapsto \vec{\lambda v}$ such that $\cdot,+,+$ distribute and are associative.
+  \wl{1.2.4 Zero Product} For some $\vec{v} \in V$, if $\lambda\vec{v} = \vec{0}$ either $\lambda=0$ or $\vec{v}=\vec{0}$.
+  \wl{1.2.3 Scalar (-1) Product} $(-1)\vec{v} = -\vec{v}$.
+\ \
+  \noindent % 1.4 Vector Subspaces
+  \wde{1.4.1 Subspace} A subset $U$ of $V$ is a subspace if $U$ contains $\vec{0}$ and is closed under $+$ and $\cdot$. Alternatively, $U$ is a subspace if it can be given an $F$-vector space structure s.t. the embedding is a homomorphism of $F$-vector spaces.
+  \wde{Linear Combination} Let $T$ be a subset of $V$. Then, $\forall \alpha_{i} \in F$, $\alpha_{1}\vec{v}_{1} + \dots + \alpha_{n}\vec{v}_{n}$ is called a linear combination.
+  \wpr{1.4.5 Span} Amongst all subspaces of $V$ that include $T$ there exists a smallest subspace $\langle T \rangle = \langle T \rangle_{F} \subseteq V$, called the span. This is the linear combination of the elements of $T$.
+  \wde{1.4.7 Generating Set} $T$ is called a generating set if its span equals $V$. If $T$ is finite, then $V$ is finitely generated.
+\ \
+  \noindent % 1.5 Linear Dependence and Bases
+  \wde{1.5.1 Linear Independence} $T$ is called linearly independent if for all pairwise different vectors $\vec{v}_{1},\dots,\vec{v}_{n} \in T$ and $\alpha \in F$, $\alpha_{1}\vec{v}_{1} + \dots + \alpha_{n}\vec{v}_{n} = 0 \Rightarrow \alpha_{1} = \dots = \alpha_{n} = 0$.
+  \wde{1.5.2 Linear Dependence} $T$ is linearly dependent iff. it is not linearly independent.
+  \wde{1.5.8 Basis} A basis of $V$ is a linearly independent generating set in $V$.
+  \wde{1.5.9i Indexed Sets} $(\alpha_{i})_{i \in I}$ denotes the family of elements of $A$ indexed by $I$.
+  \wde{1.5.9ii Ordered Basis} A family of vectors indexed by $I$ that forms a basis is called an ordered basis.
+  \wde{1.5.10} The ordered basis of $F^{n}$, $\vec{e}_{i} = (0,\dots,0,1,0,\dots,0)$ ($\vec{0}$, with the $i$th position set to 1) is called the standard basis of $F^{n}$.
+  \wt{1.5.11 Linear Combinations of Basis Elements} The family $(\vec{v}_{i})_{i}$ is a basis of $V$ iff. the ``evaluation'' mapping $\Phi : F^{n} \to V; (\alpha_{1}, \dots, \alpha_{n}) \mapsto \alpha_{1}\vec{v}_{1} + \dots + a_{n}\vec{v}_{n}$ is a bijection. If we label the ordered family by $\mathcal{A} = (\vec{v}_{1}, \dots, \vec{v}_{n})$ we denote $\Phi = \Phi_{\mathcal{A}} : F^{n} \to V$.
+  \wt{1.5.12 Characterisation of Bases} The following are equivalent for a subset $E$ of $V$:
+  (1) $E$ is a basis.
+  (2) $E$ is minimal among all generating sets, meaning that $E \setminus \{\vec{v}\}$ does not generate $V$ for any $\vec{v} \in E$.
+  (3) $E$ is maximal among all linearly independent subsets, meaning that $E \cup \{\vec{v}\}$ is not linearly independent for any $\vec{v} \in V$.
+  \wc{1.5.13 Existence of Basis} All finitely generated vector fields have a basis.
+  \wt{1.5.14 Variant on 1.5.12}
+  (1) If $L \subset V$ is a linearly independent subset and $E$ is minimal amongst all spans of $V$ with the property $L \subseteq E$, then $E$ is a basis.
+  (2) If $E \subseteq V$ spans $V$ and $L$ is maximal amongst all linearly independent subsets of $V$ with the property $L \subseteq E$, then $L$ is a basis.
+  \wde{1.5.15 To $\infty$, but not beyond} Let $X$ be a set, $F$ a field. The set $\Maps(X,F)$ of all mappings $f : X \to F$ becomes an $F$-vector space when given ptwise addition and scalar multiplication. The subset of maps that send all but a finite amount of elements of $X$ to 0 $F \langle X \rangle \subseteq \Maps(X, F)$ is called the free vector space on $X$.
+  \wt{1.5.16 Variant on 1.5.11} Let $(\vec{v}_{i})_{i \in I}$ be a family of vectors in $V$. Then the following are equal:
+  (1) The family $(\vec{v}_{i})_{i \in I}$ is a basis on $V$.
+  (2) For each $\vec{v} \in V$ there is precisely one family $(\alpha_{i})_{i \in I}$ of elements in $F$, all but finitely many of which are 0 and s.t. $\vec{v} = \Sigma_{i \in I} \, \alpha_{i}\vec{v}_{i}$.
+\ \
+  % 1.6 Dimension of a Vector Space
+  \wt{1.6.1 Fundamental Estimate of Linear Algebra} No linearly independent subset of $V$ has more elements than a generating set. Thus if $L \subset V$ a linearly independent subset and $E \subseteq V$ a generating set, then $|L| \le |E|$.
+  \wt{1.6.2 Steinitz Exchange Theorem} Let $L \subset V$ be a finite linearly independent subset and $E \subseteq V$ a generating set. Then there is an injection $\phi : L \hookrightarrow E$ s.t. $(E \setminus \phi(L)) \cup L$ also generates $V$.
+  \wl{1.6.3 Exchange Lemma} Let $M \subseteq V$ a linearly independent subset, and $E \subseteq V$ a generating subset, such that $M \subseteq E$. If $\vec{v} \in V \setminus M$ is a vector s.t. $M \cup \{\vec{v}\}$ is linearly independent, then there exists $\vec{e} \in E \setminus M$ such that $\{E \setminus \{\vec{e}\}\} \cup \{\vec{v}\}$ spans $V$.
+  \wc{1.6.4 Cardinality of Bases} Let $V$ be finitely-generated.
+  (1) $V$ has a finite basis.
+  (2) $V$ cannot have an infinite basis.
+  (3) Any two bases of $V$ have the same number of elements.
+  \wde{1.6.5 Dimension} The cardinality of each basis of a finitely generated $V$ is called its dimension (denoted $\dim V$, or $\dim_{F}V$). If $V$ is not finitely generated, we say $\dim V = \infty$.
+  \wc{1.6.7 Cardinality Criterion for Bases} Let $V$ be finitely generated.
+  (1) Each linearly independent subset $L \subset V$ has at most $\dim V$ elements, and if $|L| = \dim V$ then $L$ is actually a basis.
+  (2) Each generating set $E \subseteq V$ has at least $\dim V$ elements, and if $|E| = \dim V$ then $E$ is actually a basis.
+  \wc{1.6.8 Dimension Estimate for Vector Subspaces} A proper subspace of a finite vector space has itself a strictly smaller dimension.
+  \wc{1.6.9 Remark on 1.6.8} If $U \subseteq V$ is a subspace of an arbitrary vector space, then $\dim U \le \dim V$ and if we have $\dim U = \dim V < \infty$ it follows that $U = V$.
+  \wde{1.6.9 Sum} If $U,W$ are subspaces of $V$, $U + W$ is the subspace $\langle U \cup W \rangle$ of $V$ generated by $U$ and $W$ together.
+  \wt{1.6.10 The Dimension Theorem} $\dim(U + W) + \dim(U \cap W) = \dim U + \dim W$.
+  %
+  % 1.7 Linear Mappings
+  \wde{1.7.1 Linear Map} A map $f : V \to W$ is called ($F$-)linear (or a homomorphism of $F$-vector spaces) if $\forall \vec{v}_{1}, \vec{v}_{2} \in V$ and $\lambda \in F$ we have $f(\vec{v}_{1} + \vec{v}_{2}) = f(\vec{v}_{1}) + f(\vec{v}_{2})$ and $f(\lambda \vec{v}_{1}) = \lambda \vec{v}_{1}$. If $f$ is bijective, we call the map an isomorphism of vector spaces. A homomorphism from a vector space to itself is called an endomorphism. If an endomorphism is also an isomorphism, we call it an automorphism. The set of all homomorphisms is denoted $\Hom_{F}(V,W) \subseteq \Maps_{F}(V,W)$
+  \wde{1.7.5 Fixed Point} A point that is sent to itself by a mapping. Given $f : X \to X$, we denote the set of fixed points by $X^{f} = \{x \in X : f(x) = x\}$.
+  \wde{1.7.6 Complement} Subspaces $U,W$ are complementary if addition defines a bijection $U \times W \iso V$.
+  \wde{1.7.6 (Direct) Sum} For subspaces $V_{1}, \dots, V_{n}$ of $V$, the subspace they generate is called the sum, denoted $V_{1} + \dots + V_{n}$. If the homomorphism given by $V_{1} + \dots + V_{n} \to V$ is injective, we call the sum direct (denoted $V_{1} \oplus \dots \oplus V_{n}$).
+  \wt{1.7.7 Classification of Vector Spaces by Dimension} A vector space over $F$ is isomorphic to $F^{n}$ iff. it has dimension $n$.
+  \wl{1.7.8 Linear Maps and Bases} Let $B \subset V$ be a basis. Restriction of a mapping gives a bijection $\Hom_{F}(V, W) \iso \Maps(B, W); f \mapsto f |_{B}$.
+\end{multicols}
+\end{document}
