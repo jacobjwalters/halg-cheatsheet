@@ -1,0 +1,19 @@
+\wde{1.5.1 Linear Independence} $T$ is called linearly independent (LI) if for all pairwise different vectors $\vec{v}_{1},\dots,\vec{v}_{n} \in T$ \& $\alpha \in F$, $\alpha_{1}\vec{v}_{1} + \dots + \alpha_{n}\vec{v}_{n} = 0 \Rightarrow \alpha_{1} = \dots = \alpha_{n} = 0$.
+\wde{1.5.2 Linear Dependence} $T$ is linearly dependent iff. it is not LI.
+\wde{1.5.8 Basis} A basis of $V$ is a LI generating set in $V$.
+\wde{1.5.9i Indexed Sets} $(\alpha_{i})_{i \in I}$ denotes the family of elements of $A$ indexed by $I$.
+\wde{1.5.9ii Ordered Basis} A family of vectors indexed by $I$ that forms a basis is called an ordered basis.
+\wde{1.5.10} The ordered basis of $F^{n}$, $\vec{e}_{i} = (0,\dots,0,1,0,\dots,0)$ ($\vec{0}$, with the $i$th position set to 1) is called the standard basis of $F^{n}$.
+\wt{1.5.11 Linear Combinations of Basis Elements} The family $(\vec{v}_{i})_{i}$ is a basis of $V$ iff. the ``evaluation'' map $\Phi : F^{n} \to V; (\alpha_{1}, \dots, \alpha_{n}) \mapsto \alpha_{1}\vec{v}_{1} + \dots + a_{n}\vec{v}_{n}$ is a bijection. If we label the ordered family by $\mathcal{A} = (\vec{v}_{1}, \dots, \vec{v}_{n})$ we denote $\Phi = \Phi_{\mathcal{A}} : F^{n} \to V$.
+\wt{1.5.12 Characterisation of Bases} The following are equivalent for a subset $E$ of $V$:
+(1) $E$ is a basis.
+(2) $E$ is minimal among all generating sets, meaning that $E \setminus \{\vec{v}\}$ does not generate $V$ for any $\vec{v} \in E$.
+(3) $E$ is maximal among all LI subsets, meaning that $E \cup \{\vec{v}\}$ is not LI for any $\vec{v} \in V$.
+\wc{1.5.13 Existence of Basis} All finitely generated vector fields have a basis.
+\wt{1.5.14 Variant on 1.5.12}
+(1) If $L \subset V$ is a LI subset \& $E$ is minimal amongst all spans of $V$ with the property $L \subseteq E$, then $E$ is a basis.
+(2) If $E \subseteq V$ spans $V$ \& $L$ is maximal amongst all LI subsets of $V$ with the property $L \subseteq E$, then $L$ is a basis.
+\wde{1.5.15 To $\infty$, but not beyond} Let $X$ be a set, $F$ a field. The set $\Maps(X,F)$ of all maps $f : X \to F$ becomes an $F$-vector space when given ptwise addition \& scalar multiplication. The subset of maps that send all but a finite amount of elements of $X$ to 0 $F \langle X \rangle \subseteq \Maps(X, F)$ is called the free VS on $X$.
+\wt{1.5.16 Variant on 1.5.11} Let $(\vec{v}_{i})_{i \in I}$ be a family of vectors in $V$. Then the following are equal:
+(1) The family $(\vec{v}_{i})_{i \in I}$ is a basis on $V$.
+(2) For each $\vec{v} \in V$ there is precisely one family $(\alpha_{i})_{i \in I}$ of elements in $F$, all but finitely many of which are 0 \& s.t. $\vec{v} = \Sigma_{i \in I} \, \alpha_{i}\vec{v}_{i}$.
