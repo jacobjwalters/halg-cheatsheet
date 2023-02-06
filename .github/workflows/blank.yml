@@ -13,11 +13,15 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
+          root_file: |
+            main.tex
+            exercises.tex
           post_compile: "latexmk -c"
           
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: latest
-          files: main.pdf
+          files: |
+            main.pdf
+            exercises.pdf
