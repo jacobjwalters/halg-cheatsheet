@@ -1,3 +1,4 @@
+.auctex-auto
 build/
 *.pdf
 *.synctex.gz
