@@ -55,14 +55,14 @@
   \wde{1.2.1ii Vector Space} A vector space $V$ over a field $F$ (denoted VS) is a pair of abelian group $V=(V, +)$ \& a map $F \times V \to V; (\lambda, \vec{v}) \mapsto \vec{\lambda v}$ such that $\cdot,+,+$ distribute \& are associative.
   \wl{1.2.4 Zero Product} For some $\vec{v} \in V$, if $\lambda\vec{v} = \vec{0}$ either $\lambda=0$ or $\vec{v}=\vec{0}$.
   \wl{1.2.3 Scalar (-1) Product} $(-1)\vec{v} = -\vec{v}$.
-\ \
-  \noindent % 1.4 Vector Subspaces
+  %
+  % 1.4 Vector Subspaces
   \wde{1.4.1 Subspace} A subset $U$ of $V$ is a subspace if $U$ contains $\vec{0}$ \& is closed under $+$ \& $\cdot$. Alternatively, $U$ is a subspace if it can be given an $F$-vector space structure s.t. the embedding is a homomorphism of $F$-vector spaces.
   \wde{Linear Combination} Let $T$ be a subset of $V$. Then, $\forall \alpha_{i} \in F$, $\alpha_{1}\vec{v}_{1} + \dots + \alpha_{n}\vec{v}_{n}$ is called a linear combination.
   \wpr{1.4.5 Span} Amongst all subspaces of $V$ that include $T$ there exists a smallest subspace $\langle T \rangle = \langle T \rangle_{F} \subseteq V$, called the span. This is the linear combination of the elements of $T$.
   \wde{1.4.7 Generating Set} $T$ is called a generating set if its span equals $V$. If $T$ is finite, then $V$ is finitely generated.
-\ \
-  \noindent % 1.5 Linear Dependence and Bases
+  %
+  % 1.5 Linear Dependence and Bases
   \wde{1.5.1 Linear Independence} $T$ is called linearly independent (LI) if for all pairwise different vectors $\vec{v}_{1},\dots,\vec{v}_{n} \in T$ \& $\alpha \in F$, $\alpha_{1}\vec{v}_{1} + \dots + \alpha_{n}\vec{v}_{n} = 0 \Rightarrow \alpha_{1} = \dots = \alpha_{n} = 0$.
   \wde{1.5.2 Linear Dependence} $T$ is linearly dependent iff. it is not LI.
   \wde{1.5.8 Basis} A basis of $V$ is a LI generating set in $V$.
@@ -82,7 +82,7 @@
   \wt{1.5.16 Variant on 1.5.11} Let $(\vec{v}_{i})_{i \in I}$ be a family of vectors in $V$. Then the following are equal:
   (1) The family $(\vec{v}_{i})_{i \in I}$ is a basis on $V$.
   (2) For each $\vec{v} \in V$ there is precisely one family $(\alpha_{i})_{i \in I}$ of elements in $F$, all but finitely many of which are 0 \& s.t. $\vec{v} = \Sigma_{i \in I} \, \alpha_{i}\vec{v}_{i}$.
-\ \
+  %
   % 1.6 Dimension of a Vector Space
   \wt{1.6.1 Fundamental Estimate of Linear Algebra} No LI subset of $V$ has more elements than a generating set. Thus if $L \subset V$ a LI subset \& $E \subseteq V$ a generating set, then $|L| \le |E|$.
   \wt{1.6.2 Steinitz Exchange Theorem} Let $L \subset V$ be a finite LI subset \& $E \subseteq V$ a generating set. Then there is an injection $\phi : L \hookrightarrow E$ s.t. $(E \setminus \phi(L)) \cup L$ also generates $V$.
@@ -110,8 +110,18 @@
   \wpr{1.7.9 Inverses}
   (1) Every injective linear map $f : V \hookrightarrow W$ has a \emph{left inverse}, i.e. a linear map $g : W \to V$ such that $g \circ f = \id_{V}$.
   (2) Every surjective linear map $f : V \twoheadrightarrow W$ has a \emph{right inverse}, i.e. a linear map $g : W \to V$ such that $f \circ g = \id_{W}$.
-\ \
+  %
   % 1.8 Rank-Nullity Theorem
-  \wde{1.8.1 Image \& Kernel} The image of a linear map $f : V \to W$ is the subspace $\im(f) = f(V) \subseteq W$.
+  \wde{1.8.1 Image \& Kernel} The image of a linear map $f : V \to W$ is the subspace $\im(f) = f(V) \subseteq W$. The preimage of the zero vector is the subspace is denoted $\ker(f) = f^{-1}(0) = \{v \in V | f(v)=0\}$.
+  \wl{1.8.2 Injectivity} $f$ is injective iff. the kernel is 0.
+  \wt{1.8.4 Rank-Nullity} $\dim V = \dim(\ker f) + \dim(\im f)$
+  %
+  %
+  %  CHAPTER 2: Linear Mappings and Matrices
+  %
+  % 2.1 Linear Mappings $F^{m} \to F^{n}$ and Matrices
+  \wt{2.1.1 Finite Linear Mappings $F^{m} \to F^{n}$ and Matrices} There is a bijection between the space of maps $F^{m} \to F^{n}$ and the set of $n \times m$ matrices in $F$: $M : \Hom_{F}(F^{m}, F^{n}) \iso Mat(n \times m, F);\, f \mapsto \[f\]$.
+\end{multicols}
+
 \end{multicols}
 \end{document}
