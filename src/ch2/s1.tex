@@ -1,1 +1,10 @@
-\wt{2.1.1 Finite Linear Mappings $F^{m} \to F^{n}$ and Matrices} There is a bijection between the space of maps $F^{m} \to F^{n}$ and the set of $n \times m$ matrices in $F$: $M : \Hom_{F}(F^{m}, F^{n}) \iso Mat(n \times m, F);\, f \mapsto [f]$.
+\wt{2.1.1 Finite Linear Mappings $F^{m} \to F^{n}$ \& Matrices} There is a bijection between the space of maps $F^{m} \to F^{n}$ \& the set of $n \times m$ matrices in $F$: $M : \Hom_{F}(F^{m}, F^{n}) \iso \Mat(n \times m, F);\, f \mapsto [f]$. This attaches to each linear mapping $f$ its \emph{representing matrix} $M(f) = [f]$. The columns of this matrix are the images of $f$ under the standard basis elements of $F^{m}$. The inverse of this can be written as $\Mat(n \times m; F) \to \Hom_{F}(F^{m}, F^{n}); A \mapsto (A \circ)$, where $(A \circ) : F^{m} \to F^{n}$ represents multiplication by some matrix $A \in Mat(n \times m; F)$.
+\wde{2.1.4 Permutation Matrix} For $\pi \in S_{n}$, we may define a \emph{permutation matrix} acting on $F^n$ representing the homomorphism $P_{\pi}(\vec{e}_{i}) = \vec{e}_{i}$.
+\wde{2.1.6 Matrix Product} Let $n, m, l \in \mathbb{N}, F$ a field, \& let $A \in \Mat(n \times m; F)$ \& $B \in \Mat(m \times l; F)$ be matrices. The \emph{product} $A \circ B = AB \in \Mat(n \times l; F)$ is the matrix defined by $(AB)_{ik} = \Sigma_{j=1}^{m} A_{ij} B_{jk}$. This produces a map $\Mat(n \times m; F) \times \Mat(m \times l; F) \to \Mat(n \times l; F); (A, B) \mapsto AB$.
+\wt{2.1.8 Maps $\circ$ Matrix $\times$} Let $g : F^{l} \to F^{m}$ \& $f : F^{m} \to F^{n}$ be linear maps. Then, $[f \circ g] = [f][g]$.
+\wpr{2.1.9 Calculating w/ Matrices} Let $k,l,m,n \in \mathbb{N}, A, A' \in \Mat(n \times m; F), B, B' \in \Mat(m \times l; F), C \in \Mat(l \times k; F)$ \& $I = I_{m}$ the $(m \times m)$-identity matrix. Then the following hold for matrix multiplication:
+(1) $(A + A')B = AB + A'B$
+(2) $A(B + B')= AB + AB'$
+(3) $IB = B$
+(4) $AI = A$
+(5) $(AB)C = A(BC)$.
