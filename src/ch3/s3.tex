@@ -1,0 +1,12 @@
+\wde{3.3.1 Polynomial over $R$} A polynomial over a ring $R$ is an expression of the form $P = a_0 + a_1X + a_2X^2 + \dots + a_mX^m$ for some $m \in \mathbb{N}$ and $a_i \in R$. The set of all such $P$ over $R$ is denoted $R[X]$. A polynomial with leading coeff. 1 is called monic.
+\wde{3.3.2 Ring of $P$ over $R$} With the usual addition \& multiplication for polynomials, $R[X]$ forms the ring of polynomials over $R$. The zero and identity of $R[X]$ are those of $R$.
+\wl{3.3.3 Inherited Properties}
+(i) If $R$ has no 0-divisors then $R[X]$ has no 0-divisors \& $\deg(PQ) = \deg(P) + \deg(Q)$ for non-zero $P, Q \in R[X]$.
+(ii) If $R$ is an ID then so is $R[X]$.
+\wt{3.3.4 Division \& Remainder} Let $Q$ be monic. There exists unique $A, B \in R[X]$ s.t. $P = AQ + B$ and $\deg(B) < \deg(Q)$ or $B = 0$.
+\wde{3.3.6 Evaluation} $P$ can be evaluated at the element $\lambda$ to produce $P(\lambda)$ by replacing the powers of $X$ in $P$ by corresponding powers of $\lambda$. Thus we have a mapping $R[X] \mapsto \Maps(R, R)$.
+\wpr{3.3.9 Root} $\lambda$ is a root of $P$ iff. $(X - \lambda)$ divides $P(X)$.
+\wt{3.3.10} Let $R$ be an ID. Then a non-zero $P \in R[X] \setminus \{0\}$ has at most $\deg{P}$ roots in $R$.
+wde{3.3.11 Algebraically Closed} A field $F$ is AC if each non-constant $P \in F[X] \setminus F$ with coeffs. in $F$ has a root in $F$.
+\wt{3.3.12 Fund. Thm. of Algebra} $\mathbb{C}$ is AC. 
+\wt{3.3.14 Decomposition} If $F$ is AC, then every non-zero $P \in F[X] \setminus \{0\}$ decomposes into linear factors $P = c(X - \lambda_1) \dots (X - \lambda_n)$ with $n \ge 0$, $c \in F^{\times}$ and $\lambda_1, \dots, \lambda_n \in F$. This decomp is unique up to reordering the factors.

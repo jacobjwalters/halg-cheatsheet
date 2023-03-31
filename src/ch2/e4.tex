@@ -1,0 +1,34 @@
+\subsection{Change of a Matrix by Change of Basis}
+\item Check that cor2.4.4 agrees with the calculations made in ex2.1.5, ex2.3.5, and ex2.4.2.
+\item Let $V$ be an $F$-vector space with ordered basis $(\vec{v}_1, \dots, \vec{v}_n)$. Show that change of basis matrices provide a bijection $\{\text{ordered bases of } V\} \iso \GL(n; F)$; $B \mapsto \,_\mathcal{B}[\id_V]_\mathcal{A}$.
+\item The purpose of this exercise is to calculate the order of the finite gruop $\GL(n; \mathbb{F}_p)$. We will do this in two ways, the first using the Orbit-Stabilizer theorem (FPM 4.3.5) as a means of revision, and the second by direct counting.
+  \begin{enumerate}
+    \item Show that $\GL(n; \mathbb{F}_p)$ acts transitively on $\mathbb{F}_p \setminus \{ \mathbf{0} \}$.
+    \item Determine the stabilizer of the vector $\mathbf{e}_1 = (1, 0, \dots, 0)\T \in \mathbb{F}_p^n$ and establish that
+      $$
+      |\Stab\mathbf{e}_1| = p^{n-1} |\GL(n-1; \mathbb{F}_p)|.
+   $$
+   \item Using the Orbit-Stabilizer theorem, determine $|\GL(n; \mathbb{F}_p)|$.
+   \item Count the number of ways of constructing a basis of $\mathbb{F}_p^n$ one vector at a time. The matrix whose columns are the basis elements is an element of $\GL(n; \mathbb{F}_p)$, and so the number of ways of constructing a basis yields $|\GL(n; \mathbb{F}_p)|$.
+  \end{enumerate}
+
+  \item An endomorphism $f : V \to V$ of an $F$-vector space is called \emph{nilpotent} if and only if there exists $d \in \mathbb{N}$ such that $f^d = \mathbf{0}$. Suppose that $f : V \to V$ is a nilpotent endomorphism of a finite-dimensional $F$-vector space $V$. Show that $V$ has an ordered basis $\mathcal{A}$ such that the representing matrix $\,_{\mathcal{A}}[f]_{\mathcal{A}}$ with respect to $\mathcal{A}$ has the form of an upper triangular matrix with only 0s on the diagonal. Show conversely that any $(n \times n)$-matrix $M$ that is upper triangular with only 0s on the diagonal satisfies $M^d = \mathbf{0}$. (This exercise is closely related to Chapter 6's material on JNF)
+  \item Let $A$ be an $n \times m$ matrix and $B$ be an $m \times n$ matrix, both over $F$. Show that $\tr(AB) = \tr (BA)$.
+  \item Let $A, B \in \Mat(n, F)$  and $\lambda \in F$. Show that:
+    \begin{enumerate}
+    \item $\tr(\lambda A) = \lambda \tr(A)$,
+    \item $\tr(A + B) = \tr(A) + \tr(B)$,
+    \item $\tr(AB) = \tr(BA)$.
+    \end{enumerate}
+
+    Prove that if $f : Mat(n, F) \to F$ is such that
+    \begin{enumerate}
+    \item $f(\lambda A) = \lambda f(A)$,
+    \item $f(A + B) = f(A) + f(B)$,
+    \item $f(AB) = f(BA)$,
+    \end{enumerate}
+    then $f(A) = \alpha \tr(A)$ for some $\alpha \in F$ and all $A \in \Mat(n, F)$. Show further that if $f(1_n) = n \ne 0 \in F$ then $f$ is the trace function $\tr$.
+    
+  \item Let $f : V \to V$ and $g : W \to W$ be linear maps where $V$ and $W$ are finite-dimensional $F$-vector spaces. Show that $\tr(fg) = \tr(gf)$.
+  \item Let $V$ be a finite-dimensional $F$-vector space and let $f : V \to V$ be an idempotent, that is $f^2 = f$. Show that $\tr(f) = \dim(\im f)$.
+  \item Let $V$ be a finite-dimensional $F$-vector space and let $f : V \to V$ be a linear map. Show that $\tr((f \circ) | \Endo_F(V)) = (\dim_F V) \tr(f | V)$.
