@@ -1,0 +1,6 @@
+\wde{3.5.1 Relation} A relation $R$ on a set $X$ is a subset $R \subseteq X \times X$. $R$ is an equivalence relation on $X$ iff. the following hold:
+(1) Reflexivity: $xRx$;
+(2) Symmetry: $xRy \Leftrightarrow yRx$;
+(3) Transitivity: $(xRy \land yRz) \rightarrow xRz$.
+\wde{3.5.3 Equiv Class} Suppose that $\sim$ is an ER on $X$. For $x \in X$ the set $E(x) := \{z \in X : z \sim x\}$ is called the equivalence class of $x$. A subset $E \subseteq X$ is an EC for our ER if there is an $x \in X$ for which $E = E(x)$. An element of an EC is called a representative of the class. A subset $Z \subseteq X$ containing precisely one element from each EC is called a system of representatives for the ER.
+\wde{3.5.5 Set of ECs} Given the ER $\sim$ on $X$ we denote the set of ECs, which is a subset of $\mathcal{P}(X)$, by $(X/\sim) := \{E(x) : x \in X\}$. There is a canonical surjection $\text{can} : X \to (X/\sim); x \mapsto E(x)$.

@@ -1,0 +1,6 @@
+\wde{3.6.1 Ideal Cosets} Let $I \trianglelefteq R$ be an ideal in a ring $R$. The set $x + I := \{x + i : i \in I\} \subseteq R$ is a coset of $I$ in $R$ or the coset of $x$ with respect to $I$ in $R$.
+\wde{3.6.3 Factor Ring} Let $\sim$ be the ER defined by $x \sim y \Leftrightarrow x - y \in I$. Then $R/I$, the factor ring of $R$ by $I$ or the quotient of $R$ by $I$, is the set $(R/\sim)$ of cosets of $I$ in $R$.
+\wt{3.6.4 Quotients are Rings} $R/I$ is a ring, where the operation of addition is defined by $(x + I) \dot{+} (y + I) = (x + y) + I$ and multiplication is defined by $(x + I)\cdot(y + I) = xy + I$ for all $x, y \in R$, and $\dot{+}$ is addition in $R/I$.
+\wt{3.6.7 Universal Property of Factor Rings}
+(1) The mapping $\text{can} : R \rightarrow R/I$ sending $r$ to $r + I$ for all $r \in R$ is a surjective ring homomorphism with kernel $I$.
+(2) If $f : R \to S$ is a ring homomorphism with $f(I) = \{0_S\}$, so that $I \subseteq \ker f$, then there is a unique ring homomorphism $\bar{f} : R/I \to S$ st $f = \bar{f} \circ \text{can}$.
