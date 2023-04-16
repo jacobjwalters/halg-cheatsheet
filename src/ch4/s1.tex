@@ -1,0 +1,16 @@
+\wde{4.1.1 n-th Symmetric Group} Bijections from $\{1, ..., n\}$ to itself.
+Denoted $S_n$.
+Has $n!$ elements.
+A transposition is a bijection that swaps two elements exactly.
+\wde{4.1.2} Inversion of $\sigma \in S_n$ is a pair $(i, j)$
+s.t. $1 \le i < j \le n$ and $\sigma(i) > \sigma(j)$.
+Length of $\sigma$ is the number of inversions, denoted $\ell$.
+$\ell = |\{(i, j) : i < j \text{ but } \sigma(i) > \sigma(j)\}|$.
+Sign of $\sigma$ is $\text{sgn}(\sigma) = (-1)^{\ell}$.
+Even $\sigma$ have sign $+1$, odd $\sigma$ have sign $-1$.
+\wl{4.1.5 Multiplicativity of Sign}
+$\forall \sigma, \tau \in S_n$, $\text{sgn}(\sigma \tau) = \text{sgn}(\sigma) \text{sgn}(\tau)$.
+\wde{4.1.6 Alternating group}
+Set of even permutations is a subgroup of $S_n$.
+Denoted $A_n$.
+Kernel of grp hom: $A_n = \text{ker}(\text{sgn} : S_n \to \{+1, -1\})$.
