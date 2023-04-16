@@ -1,0 +1,30 @@
+\wde{4.3.1 Bilinear form}
+Let $U, V, W$ be $F$-vector spaces.
+A bilinear form on $U \times V$ w/ values in $W$ is a map $H : U \times V \to W$ s.t.
+it is linear in both of its entries:
+$\forall u_1, u_2 \in U, v_1, v_2 \in V, \lambda \in F$,
+(1) $H(u_1 + u_2, v_1) = H(u_1, v_1) + H(u_2, v_1)$,
+(2) $H(\lambda u_1, v_1) = \lambda H(u_1, v_1)$,
+(3) $H(u_1, v_1 + v_2) = H(u_1, v_1) + H(u_1, v_2)$,
+(4) $H(u_1, \lambda v_1) = \lambda H(u_1, v_1)$.
+$H$ is symmetric if $H(u, v) = H(v, u)$ for all $u, v \in U$.
+$H$ is alternating if $H(u,u) = 0$ for all $u, v \in U$,
+in this case $H(u, v) = -H(v, u)$ always,
+but $H(u, v) = -H(v, u)$ only implies that $H$ is alternating iff $1_F + 1_F \neq 0_F$.
+\wde{4.3.3 Multilinear form}
+Let $V_1, ..., V_n, W$ be $F$-vector spaces.
+A mapping $H: V_1 \times ... \times V_n \to W$ is a multilinear form if
+for each $j$ the map $V_j \to W$
+defined by $v_j \mapsto H(v_1, ..., v_j, ..., v_n)$,
+with the $v_i \in V_i$ fixed for $i \neq j$, is linear.
+\wde{4.3.4 Alternating} Let $V, W$ be $F$-vector spaces.
+A multilinear form $H : V \times ... \times V \to W$ is alternating iff
+it vanishes on every $n$-tuple of elements of $V$ that has at least two equal entries.
+It has the property that $H(v_1, ..., v_i, ..., v_j, ..., v_n) = -H(v_1, ..., v_j, ..., v_i, ..., v_n)$.
+So for any permutation $\sigma \in S_n$,
+$H(v_1, ..., v_n) = \text{sgn}(sigma) H(v_{\sigma(1)}, ..., v_{\sigma(n)})$.
+\wt{4.3.6 Characterisation of the Determinant}
+Let $F$ be a field.
+Then $\text{det} : \text{Mat}(n; F) \to F$ is the unique alternating multilinear form
+on $n$-tuples of column vectors with values in $F$
+that takes the value $1_F$ on $I_n$.
