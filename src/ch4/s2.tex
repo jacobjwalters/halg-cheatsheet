@@ -1,8 +1,7 @@
 \wde{4.2.1 Determinant, Leibniz formula}
-$\det : \text{Mat}(n; R) \to R$,
-where $R$ is a commutative ring,
-$n \in \mathbb{N}$.
-$A = (a_{ij}) \mapsto \text{det}(A) = \sum_{\sigma \in S_n} \text{sgn} a_{1 \sigma(1)} ... a_{n \sigma(n)}$.
-Degen case: if $n = 0$, then $\text{det}(A) = 1$.
+For a commutative ring $R$, $n \in \mathbb{N}$,
+$\det : \Mat(n; R) \to R$ is given by
+$A = (a_{i,j}) \mapsto \det(A) = \sum_{\sigma \in S_n} \sgn(\sigma) a_{1, \sigma(1)} \dots a_{n, \sigma(n)}$.
+Degen case: if $n = 0$, then $\det(A) = 1$.
 Note: the determinant of a block-upper triangular matrix
 is the product of the determinants of the blocks along the diagonal.

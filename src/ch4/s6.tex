@@ -1,0 +1,9 @@
+\wpr{4.6.1 Triangularisability}
+Let $f$ be an endomorphism on a finite dimensional $V$. The following are equivalent:
+(1) $V$ has an ordered basis $\mathcal{B}$ such that $f(\vec{v}_1) = a_{11}\vec{v}_1$, $f(\vec{v}_2) = a_{12}\vec{v}_1 + a_{22}\vec{v}_2$, ..., $f(\vec{v}_n) = a_{1n}\vec{v}_1 + \dots + a_{nn}\vec{v}_n \in V$ s.t. $\vec{v}_1$ is an eigenvector with eigenvalue $a_{11}$, or equivalently s.t. the $n \times n$ matrix $\,_{\mathcal{B}}[f]_{\mathcal{B}} = (a_{ij})$ representing $f$ with respect to $\mathcal{B}$ is upper triangular. We say that $f$ is \emph{triangularisable}.
+(2) $\chi_f(x)$ decomposes into linear factors in $F[x]$.
+Note: $A \in \Mat(n; F)$  is nilpotent iff. $\chi_A(x) = x^n$.
+\wde{4.6.6 Diagonalisability} An endomorphism $f : V \to V$ is diagonalisable iff. there exists a basis of $V$ consisting of eigenvectors of $f$. If $V$ is finite dimensional then this is the same as saying there exists an ordered basis $\mathcal{B} = \left\{ \vec{v}_1, \dots, \vec{v}_n \right\}$ s.t. $\,_{\mathcal{B}}[f]_{\mathcal{B}} = \diag(\lambda_1, \dots, \lambda_n)$.
+A square matrix $A$ is diagonalisable iff. the corresponding linear map $F^n \rightarrow F^n$ given by left multiplication by $A$ is diagonalisable. By cor2.4.4this means $A$ is conj. to a diagonal matrix, and the columns of $P$ are the vectors of a basis of $F^n$ consisting of eigenvectors of $A$ with eigenvalues $\lambda_1, \dots, \lambda_n$.
+\wle{4.6.9 LI of Eigenvectors} If the eigenvalues of $f$ are pairwise different, the eigenvectors are linearly independent.
+\wth{4.6.10 Cayley-Hamilton Theorem} For a comm. ring $R$ and $A \in \Mat(n; R)$, evaluating $\chi_A(x) \in R[x]$ at $A$ gives zero.

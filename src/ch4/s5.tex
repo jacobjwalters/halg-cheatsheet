@@ -1,20 +1,21 @@
 \wde{4.5.1 Eigenvalues, Eigenvectors, Eigenspaces}
-Let $V$ an $F$-v s, $f: V \to V$ an endom. $\lambda \in F$ is an eigenvalue of $f$ iff
-$\exists v \in V$ s.t. $f(v) = \lambda v$. Then $v$ is an eigenvec of $f$ w/ eigenval $\lambda$.
+Let $V$ be an $F$-VS, $f: V \to V$ an endomorphism. $\lambda \in F$ is an eigenvalue of $f$ iff
+$\exists v \in V$ s.t. $f(v) = \lambda v$. Then $v$ is an eigenvector of $f$ with eigenvalue $\lambda$.
 The eigenspace of $f$ w/ eigenval $\lambda$ is $E(\lambda, f) = \{v \in V : f(v) = \lambda v\}$.
-This is a subsp of $V$.
+This is a subspace of $V$.
 \wt{4.5.4 Existence of Eigenvalues}
-Each endom of a non-zero fin dim vec space over an algebraically closed field has an eigenvalue.
+Each endomorphism of a non-zero finite dimensional VS over an algebraically closed field has an eigenvalue.
 \wde{4.5.6 Characteristic Polynomial}
-Let $R$ a comm ring, $A \in \text{Mat}(n; R)$.
-Then the char poly of $A$ is the polynomial $\chi_A(x) = \text{det}(xI_n - A)$.
-\wt{4.5.8 Eigenvals and Char Polys}
-$F$ field, $A \in \text{Mat}(n; F)$.
-The eigenvals of the lin map $A : F^n \to F^n$ are the roots of $\chi_A(x)$.
-Note: $\chi_A(x) = x^n - \text{Tr}(A)x^{n-1} + ... + (-1)^n \text{det}(A)$.
-\wde{Conjugate matrices}
-$A, B \in \text{Mat}(n; R)$ are conjugate iff there exists $P \in \text{GL}(n; R)$ s.t. $B = P^{-1}AP$.
-This is an eq reln on $\text{Mat}(n; R)$.
-Note: char polys of conjugates are the same.
-Note: endom of odd-dim real v s always has a real eigenval,
-and if its det is positive and real then it has a positive real eigenval.
+Let $R$ a comm ring, $A \in \Mat(n; R)$.
+Then the characteristic polynomial of $A$ is $\chi_A(x) = \det(xI_n - A) \in R[x]$.
+\wt{4.5.8 Eigenvalues and Characteristic Polynomials}
+$F$ field, $A \in \Mat(n; F)$.
+The eigenvalues of the linear map $A : F^n \to F^n$ are the roots of $\chi_A(x)$.
+Note: $\chi_A(x) = x^n - \tr(A)x^{n-1} + ... + (-1)^n \det(A)$.
+\wde{4.5.9 Conjugate matrices}
+$A, B \in \Mat(n; R)$ are conjugate iff there exists $P \in \GL(n; R)$ s.t. $B = P^{-1}AP$.
+This is an ER on $\Mat(n; R)$.
+Note: characteristic polynomials of conjugates are the same.
+Note: an endomorphism of an odd-dimensional real VS always has a real eigenvalue,
+and if its det is positive real then the eigenvalue is too.
+Note: given an enomorhpism $f : V \to V$ of $n$-dimensional VS $V$, and an $m$-dimensional subspace $W \subseteq V$  such that $g : W \rightarrow W; \vec{w} \mapsto f(\vec{w})$ and $h : V/W \rightarrow V/W; W + \vec{v} \mapsto W + f(\vec{v})$ are endomorphisms, $\chi_f(x) = \chi_g(x)\chi_h(x) \in F[x]$.

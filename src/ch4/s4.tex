@@ -1,32 +1,32 @@
-\wt{4.4.1 Multiplicativity of the Determinant}
-Let $R$ be a comm ring and $A, B \in \text{Mat}(n; R)$.
-Then $\text{det}(AB) = \text{det}(A) \text{det}(B)$.
+\wt{4.4.1 Multiplicativity of $\det$}
+Let $R$ be a comm ring and $A, B \in \Mat(n; R)$.
+Then $\det(AB) = \det(A) \det(B)$.
 \wt{4.4.2 Determinantal Criterion for Invertibility}
 The determinant of a square matrix with entries in a field is non-zero iff the matrix is invertible.
-This gives unique determinants $\text{det}(f|V)$ (or $\text{det}(f)$) to endomorphisms, since $\text{det}(A^{-1}BA) = \text{det}(B)$
+This gives unique determinants $\det(f|V)$ (or $\det(f)$) to endomorphisms, since $\det(A^{-1}BA) = \det(B)$
 for any invertible $A$ (CoB).
-\wl{4.4.4} $\forall A \in \text{Mat}(n; R)$, $\text{det}(A) = \text{det}(A^T)$, where $R$ is a commutative ring.
+\wl{4.4.4} $\forall A \in \Mat(n; R)$, $\det(A) = \det(A^\T)$, where $R$ is a commutative ring.
 \wde{4.4.6 Cofactor}
-Let $A \in \text{Mat}(n; R)$, where $R$ is a comm ring.
-Then the $(i, j)$ cofactor of $A$ is $C_{ij} = (-1)^{i+j} \text{det}(A \langle i, j \rangle)$,
+Let $A \in \Mat(n; R)$, where $R$ is a comm ring.
+Then the $(i, j)$ cofactor of $A$ is $C_{ij} = (-1)^{i+j} \det(A \langle i, j \rangle)$,
 where $A \langle i, j \rangle$ is the matrix obtained from $A$ by deleting the $i$th row and $j$th column.
 \wt{4.4.7 Laplace's Cofactor Expansion}
-Let $A = (a_{ij}) \in \text{Mat}(n; R)$, where $R$ is a comm ring.
+Let $A = (a_{ij}) \in \Mat(n; R)$, where $R$ is a comm ring.
 Then for a fixed $i$, the $i$-th row expansion of the det is
-$\text{det}(A) = \sum_{j = 1}^n a_{ij} C_{ij}$,
+$\det(A) = \sum_{j = 1}^n a_{ij} C_{ij}$,
 for a fixed $j$, the $j$-th column expansion is
-$\text{det}(A) = \sum_{i = 1}^n a_{ij} C_{ij}$.
+$\det(A) = \sum_{i = 1}^n a_{ij} C_{ij}$.
 \wde{4.4.8 Adjugate Matrix}
-Let $A \in \text{Mat}(n; R)$, where $R$ is a comm ring.
-Then the adjugate matrix of $A$ is the matrix $\text{adj}(A)_{ij} = (C_{ji})$,
+Let $A \in \Mat(n; R)$, where $R$ is a comm ring.
+Then the adjugate matrix of $A$ is the matrix $\adj(A)_{ij} = (C_{ji})$,
 where $C_{ji}$ is the $(j, i)$ cofactor of $A$.
 \wt{4.4.9 Cramer's Rule}
-Let $A \in \text{Mat}(n; R)$, where $R$ is a comm ring.
-Then $A \cdot \text{adj}(A) = \text{det}(A) I_n$.
-Note: In $Ax = b$, $x_i = \frac{\text{det}(A_i)}{\text{det}(A)}$ for $i = 1, ..., n$,
+Let $A \in \Mat(n; R)$, where $R$ is a comm ring.
+Then $A \cdot \adj(A) = \det(A) I_n$.
+Note: In $Ax = b$, $x_i = \frac{\det(A_i)}{\det(A)}$ for $i = 1, ..., n$,
 where $A_i$ is the matrix obtained from $A$ by replacing the $i$th column with $b$.
 \wc{4.4.11 Invertibility of Matrices}
-$R$ comm ring, $A \in \text{Mat}(n; R)$ is invertible iff $\text{det}(A) \in R^\times$.
+$R$ comm ring, $A \in \Mat(n; R)$ is invertible iff $\det(A) \in R^\times$ (a unit).
 \wt{4.4.14 Jacobi's Formula}
 Let $A = (a_{ij})$ where the coefficients $a_{ij} = a_{ij}(t)$ are functions of $t$.
-Then $\frac{d}{dt} \text{det}(A) = \text{Tr} \text{Adj}(A) \frac{d A}{dt}$.
+Then $\frac{d}{dt} \det(A) = \tr \adj(A) \frac{d A}{dt}$.
