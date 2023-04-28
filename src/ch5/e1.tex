@@ -1,0 +1,20 @@
+\subsection{Inner Product Spaces: Definitions}
+\item Confirm the following claims:
+  \begin{itemize}
+  \item On $\mathbb{R}^2$ define $(\vec{x}, \vec{y}) = x_1y_1 + 4x_2y_2$. This is an inner product.
+  \item On $\mathbb{R}^2$ define $(\vec{x}, \vec{y}) = 2x_1y_1 + x_1y_2 + x_2y_1 + x_2y_2$. This is an inner product.
+  \item On $\mathbb{R}^2$ define $(\vec{x}, \vec{y}) = x_1y_1 + 2x_1y_2 + 2x_2y_1 + x_2y_2$. This is not an inner product.
+  \item Fix real numbers $a < b$. For $P, Q \in \mathbb{R}[X]_{< n}$ define $(P, Q) = \int_a^b P(X)Q(X)dX$. This is an inner product.
+  \end{itemize}
+  
+\item Confirm the following:
+  \begin{itemize}
+  \item On $\mathbb{C}^2$ define $(\vec{z}, \vec{w}) = z_1\bar{w_1} + 4z_2\bar{w_2}$. This is an inner product.
+  \item Let $V = C_{\mathbb{C}}[a, b]$ be the vector space of all continuous complex valued functions defined on $[a, b]$ where $a < b$ are real. (continuity of complex functions is the natural extension of the real valued functions, using the modulus in $\mathbb{C}$ to measure ``nearness''). for $f$, $g \in V$ define
+    \[
+      (f, g) = \int_a^b f(t)\bar{g(t)}dt
+    \]
+    (For a complex valued function $\phi$ on an interval $[a, b]$, the integral $\int_a^b\phi(t)dt$ is defined to be $\int_a^b \Re(\phi(t))dt + \sqrt{-1}\int_a^b \Im(\phi(t))dt$). This is an inner product.
+  \end{itemize}
+
+\item In an inner product space $V$ show that $||\lambda \vec{v}|| = |\lambda|||\vec{v}||$ for all $\vec{v} \in V$ and all $\lambda \in \mathbb{R}$ or $\mathbb{C}$ as relevant.

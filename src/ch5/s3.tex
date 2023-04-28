@@ -1,0 +1,10 @@
+\wde{5.3.1 Adjoint} Let $V$ be an IP space. Then two endomorphisms $T, S : V \to V$ are caled adjoint to one another if $\forall \vec{v}, \vec{w} \in V$: $(T\vec{v}, \vec{w}) = (\vec{v}, S\vec{w})$. In this case we write $S = T^{*}$ and call $S$ the adjoint of $T$.
+Any endomorphism has at most one adjoint.
+Note: for $A \in \Mat(n; F)$, $(A \circ \vec{v}, \vec{w}) = (\vec{v}, \bar{A}^{\T} \circ \vec{w})$ where $\bar{A}$ has the compex conjugate of each entry in $A$.
+\wde{5.3.4 Unique Endo Adjoints} The adjoint $T^{*}$ to an endomorphism $T$ on a finite dimensional IP space always exists and is unique.
+\wde{5.3.5 Self-Adjoints} An endomorphism $T$ is self-adjoint if $T^{*} = T$.
+If a real matrix $A$ is symmetric ($A^{\T} = A$) then it describes a self-adjoint map. If a complex matrix has $A = \bar{A}^{\T}$ then it is called hermitian, and describes a self-adjoint map.
+\wth{5.3.7} Let $T : V \to V$ be a self-adjoint linear map on an IP space $V$:
+(1) Every eigenvalue of $T$ is real.
+(2) If $\lambda$ and $\mu$ are distinct eigenvalues of $T$ with corresponding eigenvectors $\vec{v}$ \& $\vec{w}$, then $(\vec{v}, \vec{w}) = 0$.
+(3) $T$ has an eigenvalue.

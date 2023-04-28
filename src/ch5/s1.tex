@@ -1,0 +1,17 @@
+\wde{5.1.1 Real Inner Product} Let $V$ be a VS over $\mathbb{R}$. An inner product on $V$ is a map $({-}, {-}) : V \times V \rightarrow \mathbb{R}$ that satisfies:
+(1) $(\lambda \vec{x} + \mu \vec{y}, \vec{z}) = \lambda(\vec{x}, \vec{z}) + \mu(\vec{y}, \vec{z})$
+(2) $(\vec{x}, \vec{y}) = (\vec{y}, \vec{x})$
+(3) $(\vec{x}, \vec{x}) \ge 0$, with equality iff $\vec{x} = \vec{0}$.
+Standard IP is the dot product.
+A finite dimensional real IP space is called Euclidean.
+\wde{5.1.3 Complex Inner Product} Let $V$ be over $\mathbb{C}$. An inner product on $V$ satisfies:
+(1) $(\lambda \vec{x} + \mu \vec{y}, \vec{z}) = \lambda(\vec{x}, \vec{z}) + \mu(\vec{y}, \vec{z})$
+(2) $(\vec{x}, \vec{y}) = \overline{(\vec{y}, \vec{x})}$
+(3) $(\vec{x}, \vec{x}) \ge 0$, with equality iff $\vec{x} = \vec{0}$.
+Standard IP is $(\vec{v}, \vec{w}) = v_1\bar{w_1} + \dots + v_n\bar{w_n}$.
+Always skew linear ($f(\vec{v}_1 + \vec{v}_2) = f(\vec{v}_1) + f(\vec{v}_2)$ and $f(\lambda \vec{v}) = \bar{\lambda}f(\vec{v})$) in the second variable (i.e. sesquilinear),
+hermitian (a sesquilinear form satisfying (2)), \& positive definite.
+A complex IP space is a unitary/pre-Hilbert space, and a finite dimensional complex IP space is a finite dimensional Hilbert space.
+\wde{5.1.5 Length \& Units} In a real or complex IP space the length or norm $\norm{\vec{v}} \in \mathbb{R}$ of a vector $\vec{v}$ is defined as the non-negative square root $\norm{v} = \sqrt{(\vec{v}, \vec{v})}$. Vectors whose length is 1 are called units. Two vectors $\vec{v}, \vec{w}$ are orthogonal (denoted $\vec{v} \bot \vec{w}$) iff $(\vec{v}, \vec{w}) = 0$.
+\wde{5.1.7 Orthonormal Families} A family $(\vec{v}_i)_{i \in I}$ for vectors from an IP space is an orthonormal family if all $\vec{v}_i$ have length 1 and are pairwise orthogonal to each other. If it's a basis, then we call it an orthonormal basis.
+\wt{5.1.10} Every finite dimensional IP space has an orthonormal basis.
