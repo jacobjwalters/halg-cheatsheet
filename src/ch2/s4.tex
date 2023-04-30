@@ -2,4 +2,7 @@
 \wt{2.4.3 Change of Basis} Let $f : V \to W$ be linear. Suppose that $\mathcal{A}, \mathcal{A}'$ are ordered basis of $V$ and $\mathcal{B}, \mathcal{B}'$ of $W$. Then $\,_{\mathcal{B}'}[f]_{\mathcal{A}'} = \,_{\mathcal{B}'}[\id_W]_{\mathcal{B}} \circ \,_{\mathcal{B}}[f]_{\mathcal{A}} \circ \,_{\mathcal{A}}[\id_V]_{\mathcal{A}'}$.
 \wc{2.4.4 Endomorphism CoB} Let $f : V \to V$ be an endomorphism. Then $\,_{\mathcal{A}'}[f]_{\mathcal{A}'} = \,_{\mathcal{A}}[\id_V]_{\mathcal{A}'}^{-1} \circ \,_{\mathcal{A}}[f]_{\mathcal{A}} \circ \,_{\mathcal{A}}[\id_V]_{\mathcal{A}'}$.
 \wt{2.4.5 SNF CoB} For some $f$, there exists $\mathcal{A}, \mathcal{B}$ s.t.\@ $\,_{\mathcal{B}}[f]_{\mathcal{A}}$ is in SNF.
-\wde{2.4.6 Trace} $\tr(A)$ is the sum of $A$'s diagonals. Any endo $f : V \to V$ of $F$ has a trace, written $\tr_F(f|V)$.
+\wde{2.4.6 Trace} $\tr(A)$ is the sum of $A$'s diagonals.
+$tr$ is linear, commutative, and unique up to a scalar multiple. $\tr(T^{-1}MT) = \tr(M)$ for invertible $T$ and any $M$.
+Any endo $f : V \to V$ of $F$ has a trace, written $\tr_F(f|V) = \tr(\,_{\mathcal{A}}[f]_{\mathcal{A}})$. If $f$ is idempotent, the $\tr(f) = \dim(\im f)$.
+If $V$ is a finite dimensional VS and $f : V \to V$ a linear map, then $\tr((f \circ) | \Endo_F(V)) = (\dim_F (V)) \tr(f | V)$.
